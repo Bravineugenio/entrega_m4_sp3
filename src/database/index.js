@@ -1,12 +1,14 @@
-import { Client } from "pg";
+import pg from 'pg'
+
+const { Client } = pg
 
 const database = new Client(
   process.env.NODE_ENV === "test"
     ? {
-        user: "",
-        host: "",
-        database: "",
-        password: "",
+        user: "eugenio",
+        host: "localhost",
+        database: "tests_products",
+        password: "123456789",
         port: 5432,
       }
     : {
